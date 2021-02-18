@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\bin\Debug\netcoreapp3.1\lw1Algoritmy.exe
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\bin\Debug\netcoreapp3.1\lw1Algoritmy.deps.json
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\bin\Debug\netcoreapp3.1\lw1Algoritmy.runtimeconfig.json
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\bin\Debug\netcoreapp3.1\lw1Algoritmy.runtimeconfig.dev.json
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\bin\Debug\netcoreapp3.1\lw1Algoritmy.dll
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\bin\Debug\netcoreapp3.1\lw1Algoritmy.pdb
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\obj\Debug\netcoreapp3.1\lw1Algoritmy.csprojAssemblyReference.cache
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\obj\Debug\netcoreapp3.1\lw1Algoritmy.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\obj\Debug\netcoreapp3.1\lw1Algoritmy.AssemblyInfo.cs
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\obj\Debug\netcoreapp3.1\lw1Algoritmy.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\obj\Debug\netcoreapp3.1\lw1Algoritmy.dll
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\obj\Debug\netcoreapp3.1\lw1Algoritmy.pdb
+C:\Users\user\source\repos\lw1Algoritmy\lw1Algoritmy\obj\Debug\netcoreapp3.1\lw1Algoritmy.genruntimeconfig.cache
