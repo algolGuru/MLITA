@@ -58,15 +58,15 @@ namespace Rift
             while( queue.ToArray().Length != 0 )
             {
                 var element = queue.Dequeue();
-                PaintRiftWave( element, riftSize, matrix );
 
+                PaintRiftWave( element, riftSize, matrix );
                 GoRight( element, riftSize, matrix, queue );
                 GoDown( element, riftSize, matrix, queue );
                 GoLeft( element, riftSize, matrix, queue );
                 GoUp( element, riftSize, matrix, queue );
+                if( matrix[ ( matrixSize - 1 ) ][ ( matrixSize - 1 ) ] != "." )
+                    break;
             }
-
-            Print( matrix );
 
 
             if( matrix[ matrixSize - 1 ][ matrixSize - 1 ] != "." )
@@ -85,8 +85,15 @@ namespace Rift
                     canGo = false;
                     break;
                 }
+                if( matrix[ element.Y - i ][ element.X + 1 ] == "@" )
+                {
+                    canGo = false;
+                    break;
+                }
                 if( matrix[ element.Y - i ][ element.X + 1 ] != "." )
                 {
+                    if( points.ToList().Count() == 0 )
+                        break;
                     canGo = false;
                     break;
                 }
@@ -95,7 +102,6 @@ namespace Rift
                     canGo = false;
                     break;
                 }
-
             }
 
             if( canGo )
@@ -112,8 +118,15 @@ namespace Rift
                     canGo = false;
                     break;
                 }
+                if( matrix[ element.Y + 1 ][ element.X - i ] == "@" )
+                {
+                    canGo = false;
+                    break;
+                }
                 if( matrix[ element.Y + 1 ][ element.X - i ] != "." )
                 {
+                    if( points.ToList().Count() == 0 )
+                        break;
                     canGo = false;
                     break;
                 }
@@ -160,6 +173,11 @@ namespace Rift
             for( int i = 0; i < riftSize; i++ )
             {
                 if( element.Y < riftSize )
+                {
+                    canGo = false;
+                    break;
+                }
+                if( element.X - i < 0 )
                 {
                     canGo = false;
                     break;

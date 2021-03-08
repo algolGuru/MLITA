@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\Safe\\Safe\\Rift.csproj": {}
+    "C:\\Users\\user\\source\\repos\\MLITA\\LW2\\Safe\\Rift.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\Safe\\Safe\\Rift.csproj": {
+    "C:\\Users\\user\\source\\repos\\MLITA\\LW2\\Safe\\Rift.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Safe\\Safe\\Rift.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\MLITA\\LW2\\Safe\\Rift.csproj",
         "projectName": "Rift",
-        "projectPath": "C:\\Users\\user\\source\\repos\\Safe\\Safe\\Rift.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\MLITA\\LW2\\Safe\\Rift.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\Safe\\Safe\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\MLITA\\LW2\\Safe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

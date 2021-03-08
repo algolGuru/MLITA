@@ -11,3 +11,16 @@ C:\Users\user\source\repos\Safe\Safe\obj\Debug\netcoreapp3.1\Rift.dll
 C:\Users\user\source\repos\Safe\Safe\obj\Debug\netcoreapp3.1\Rift.pdb
 C:\Users\user\source\repos\Safe\Safe\obj\Debug\netcoreapp3.1\Rift.genruntimeconfig.cache
 C:\Users\user\source\repos\Safe\Safe\obj\Debug\netcoreapp3.1\Rift.csprojAssemblyReference.cache
+C:\Users\user\source\repos\MLITA\LW2\Safe\bin\Debug\netcoreapp3.1\Rift.exe
+C:\Users\user\source\repos\MLITA\LW2\Safe\bin\Debug\netcoreapp3.1\Rift.deps.json
+C:\Users\user\source\repos\MLITA\LW2\Safe\bin\Debug\netcoreapp3.1\Rift.runtimeconfig.json
+C:\Users\user\source\repos\MLITA\LW2\Safe\bin\Debug\netcoreapp3.1\Rift.runtimeconfig.dev.json
+C:\Users\user\source\repos\MLITA\LW2\Safe\bin\Debug\netcoreapp3.1\Rift.dll
+C:\Users\user\source\repos\MLITA\LW2\Safe\bin\Debug\netcoreapp3.1\Rift.pdb
+C:\Users\user\source\repos\MLITA\LW2\Safe\obj\Debug\netcoreapp3.1\Rift.csprojAssemblyReference.cache
+C:\Users\user\source\repos\MLITA\LW2\Safe\obj\Debug\netcoreapp3.1\Rift.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\MLITA\LW2\Safe\obj\Debug\netcoreapp3.1\Rift.AssemblyInfo.cs
+C:\Users\user\source\repos\MLITA\LW2\Safe\obj\Debug\netcoreapp3.1\Rift.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\MLITA\LW2\Safe\obj\Debug\netcoreapp3.1\Rift.dll
+C:\Users\user\source\repos\MLITA\LW2\Safe\obj\Debug\netcoreapp3.1\Rift.pdb
+C:\Users\user\source\repos\MLITA\LW2\Safe\obj\Debug\netcoreapp3.1\Rift.genruntimeconfig.cache
