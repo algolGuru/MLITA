@@ -156,7 +156,7 @@ namespace Rift
                     canGo = false;
                     break;
                 }
-                if( points.ToList().Contains( new Point( element.X - 2, element.Y, element.Value + 1 ) ) )
+                if( points.ToList().Contains( new Point( element.X - 1, element.Y, element.Value + 1 ) ) )
                 {
                     canGo = false;
                     break;
@@ -164,7 +164,7 @@ namespace Rift
             }
 
             if( canGo )
-                points.Enqueue( new Point( element.X - 2, element.Y, element.Value + 1 ) );
+                points.Enqueue( new Point( element.X - 1, element.Y, element.Value + 1 ) );
         }
 
         static void GoUp( Point element, int riftSize, List<List<string>> matrix, Queue<Point> points )
