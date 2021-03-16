@@ -32,7 +32,7 @@ namespace Rift
         static void Main( string[] args )
         {
             var matrix = new List<List<string>> { };
-            var inputMatrix = File.ReadAllLines( "../../../input.txt" );
+            var inputMatrix = File.ReadAllLines( "../../../input2.txt" );
 
             var inputParams = inputMatrix[ 0 ].Split( ' ' );
             var matrixSize = Int32.Parse( inputParams[ 0 ] );

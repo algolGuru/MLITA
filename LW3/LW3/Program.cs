@@ -39,7 +39,6 @@ namespace LW3
             }
 
 
-
             var maxMoneyBank = banks[ 0 ];
             var maxMoneySecondBank = banks[ 0 ];
 
@@ -64,8 +63,44 @@ namespace LW3
                 }
             }
 
-            Console.WriteLine( maxMoneyBank.Money + maxMoneySecondBank.Money );
-            Console.WriteLine( maxMoneyBank.NumberOfBank + " " + maxMoneySecondBank.NumberOfBank );
+            var secondMaxMoneyBank = banks[ 0 ];
+            var secondMaxMoneySecondBank = banks[ 0 ];
+
+            for( int i = 0; i < banks.Count(); i++ )
+            {
+                if( i != banks.Count() - 1 )
+                {
+                    if( banks[ i + 1 ].Money > secondMaxMoneyBank.Money )
+                    {
+                        if( banks[ i + 1 ].DistnaceFromStart - secondMaxMoneyBank.DistnaceFromStart >= minDistance )
+                        {
+                            secondMaxMoneySecondBank = secondMaxMoneyBank;
+                        }
+                        if ( banks[ i + 1 ]  != maxMoneyBank && banks[ i + 1 ] != maxMoneySecondBank )
+                            secondMaxMoneyBank = banks[ i + 1 ];
+                    }
+
+                    if( banks[ i + 1 ].Money > secondMaxMoneySecondBank.Money )
+                    {
+                        if( secondMaxMoneyBank.DistnaceFromStart - banks[ i + 1 ].DistnaceFromStart >= minDistance || banks[ i + 1 ].DistnaceFromStart - secondMaxMoneyBank.DistnaceFromStart >= minDistance )
+                        {
+                            if( banks[ i + 1 ] != maxMoneyBank && banks[ i + 1 ] != maxMoneySecondBank )
+                                secondMaxMoneySecondBank = banks[ i + 1 ];
+                        }
+                    }
+                }
+            }
+
+            if ( secondMaxMoneyBank.Money + secondMaxMoneySecondBank.Money < maxMoneyBank.Money + maxMoneySecondBank.Money )
+            {
+                Console.WriteLine( maxMoneyBank.Money + maxMoneySecondBank.Money );
+                Console.WriteLine( maxMoneyBank.NumberOfBank + " " + maxMoneySecondBank.NumberOfBank );
+            }
+            else
+            {
+                Console.WriteLine( secondMaxMoneyBank.Money + secondMaxMoneySecondBank.Money );
+                Console.WriteLine( secondMaxMoneyBank.NumberOfBank + " " + secondMaxMoneySecondBank.NumberOfBank );
+            }
         }
     }
 }
