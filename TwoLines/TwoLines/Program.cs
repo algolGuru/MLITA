@@ -20,7 +20,7 @@ namespace TwoLines
     {
         static void Main( string[] args )
         {
-            var input = File.ReadAllLines( "../../../input.txt" );
+            var input = File.ReadAllLines( "../../../input1.txt" );
             var points = new List<Point>();
 
             foreach( var line in input )
@@ -30,7 +30,7 @@ namespace TwoLines
             }
 
 
-            if( IsIntersect( points ) )
+            if( Intersect( points ) )
             {
                 Console.WriteLine( "Yes" );
             }
@@ -41,59 +41,38 @@ namespace TwoLines
 
         }
 
-
-
-        public static bool IsIntersect( List<Point> points )
+        public static float Area( Point a, Point b, Point c )
         {
-            var x1 = points[ 0 ].X;
-            var y1 = points[ 0 ].Y;
+            return ( b.X - a.X ) * ( c.Y - a.Y ) - ( b.Y - a.Y ) * ( c.X - a.X );
+        }
 
-            var x2 = points[ 1 ].X;
-            var y2 = points[ 1 ].Y;
-
-            var x3 = points[ 2 ].X;
-            var y3 = points[ 2 ].Y;
-
-            var x4 = points[ 3 ].X;
-            var y4 = points[ 3 ].Y;
-
-            var dot = new List<float>();
-            float n;
-
-            if( y2 - y1 != 0 )
+        public static bool intersect_points( float a, float b, float c, float d )
+        {
+            if( a > b )
             {
-                float q = ( float ) ( x2 - x1 ) / ( y1 - y2 );
-                float sn = ( x3 - x4 ) + ( y3 - y4 ) * q;
-                if( sn == 0 )
-                {
-                    return false;
-                }
-                var fn = ( x3 - x1 ) + ( y3 - y1 ) * q;   // b(x) + b(y)*q
-                n = fn / sn;
-            }
-            else
+                var temp = a;
+                a = b;
+                b = temp;
+            };
+            if( c > d )
             {
-                if( y3 - y4 == 0 )
-                {
-                    return false;
-                }
-                n = ( y3 - y1 ) / ( y3 - y4 );
-            }
+                var temp = c;
+                c = d;
+                d = temp;
+            };
+            return Math.Max( a, c ) <= Math.Min( b, d );
+        }
+        public static bool Intersect( List<Point> points )
+        {
+            Point a = points[ 0 ];
+            Point b = points[ 1 ];
+            Point c = points[ 2 ];
+            Point d = points[ 3 ];
 
-            dot.Add( x3 + ( x4 - x3 ) * n );
-            dot.Add( y3 + ( y4 - y3 ) * n );
-
-            var pointOfIntersect = new Point( dot[ 0 ], dot[ 1 ] );
-
-            if( ( ( pointOfIntersect.X >= x1 && pointOfIntersect.X <= x2 && pointOfIntersect.Y >= y1 && pointOfIntersect.Y <= y2 ) &&
-                ( pointOfIntersect.X >= x3 && pointOfIntersect.X <= x4 && pointOfIntersect.Y >= y3 && pointOfIntersect.Y <= y4 ) ) ||
-                ( ( pointOfIntersect.X <= x1 && pointOfIntersect.X >= x2 && pointOfIntersect.Y <= y1 && pointOfIntersect.Y >= y2 ) &&
-                ( pointOfIntersect.X <= x3 && pointOfIntersect.X >= x4 && pointOfIntersect.Y <= y3 && pointOfIntersect.Y >= y4 ) )
-                )
-            {
-                return true;
-            }
-            return false;
+            return intersect_points( a.X, b.X, c.X, d.X )
+                && intersect_points( a.Y, b.Y, c.Y, d.Y )
+                && Area( a, b, c ) * Area( a, b, d ) <= 0
+                && Area( c, d, a ) * Area( c, d, b ) <= 0;
         }
     }
 }
